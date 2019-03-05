@@ -51,14 +51,14 @@ function head({ description, lang, meta, keywords, title }) {
           property: `og:type`,
           content: `website`,
         },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
+        // {
+        //   name: `twitter:card`,
+        //   content: metaDescription,
+        // },
+        // {
+        //   name: `twitter:creator`,
+        //   content: site.siteMetadata.author,
+        // },
         {
           name: `twitter:title`,
           content: title,
@@ -79,7 +79,6 @@ function head({ description, lang, meta, keywords, title }) {
         .concat(meta)}
     >
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous" />
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
     </Helmet>
   )
 }

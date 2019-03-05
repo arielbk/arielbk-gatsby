@@ -45,7 +45,7 @@ export const Title = styled.h1`
   margin: 0;
   padding: 0;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
   text-decoration: none;
   line-height: 1.25;

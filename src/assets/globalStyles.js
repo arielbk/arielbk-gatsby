@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     background: ${variables.colors.lightestgrey};
   }
-
+  
   body {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
@@ -26,6 +26,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     background: #333;
     background-image: linear-gradient(120deg, #333, #282828);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h3, h4 {
