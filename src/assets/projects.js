@@ -38,12 +38,12 @@ const projects = [
     name: 'arielbk',
     image: arielBk,
     blurb: [
-      'This website. A platform to showcase my web development projects.',
-      'It has been a great introduction to server-side rendering using Next.js.',
+      'This website – platform to showcase my web development projects.',
+      'This was first built as a static Next.js site, and recently migrated into Gatsby.js.',
     ],
-    skills: ['JavaScript', 'React', 'Nextjs', 'Figma'],
+    skills: ['JavaScript', 'React', 'Gatsby', 'Figma'],
     date: 'October 2018',
-    repo: 'https://github.com/arielbk/arielbk',
+    repo: 'https://github.com/arielbk/arielbk-gatsby',
     demo: 'https://arielbk.com/',
   },
   {

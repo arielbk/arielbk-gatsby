@@ -54,7 +54,7 @@ export const Skills = styled.div`
 export const Skill = styled.span`
   background: #fff;
   ${props => props.theme && `background: ${props.theme.colors.skills[props.skill.toLowerCase()]};`}
-  color: ${props => (['HTML', 'CSS', 'Bootstrap', 'Sass', 'jQuery', 'Python'].includes(props.skill)
+  color: ${props => (['HTML', 'CSS', 'Bootstrap', 'Sass', 'jQuery', 'Python', 'Gatsby'].includes(props.skill)
     ? '#fff;'
     : props.theme.colors.black)};
   padding: .5rem .6rem;

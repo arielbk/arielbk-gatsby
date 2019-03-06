@@ -32,6 +32,7 @@ const variables = {
       figma: '#60C290',
       nextjs: '#fff',
       mongodb: '#69B241',
+      gatsby: '#663399',
     },
   },
 };
