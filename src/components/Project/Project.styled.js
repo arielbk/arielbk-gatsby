@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 export const StyledProject = styled.div`
   background: ${props => (props.dark ? '#272727' : '#333')};
@@ -15,6 +16,7 @@ export const StyledProject = styled.div`
 
 export const Container = styled.div`
   padding: 4rem;
+  width: 100%;
   max-width: 1200px;
   position: relative;
 
@@ -110,7 +112,7 @@ export const ThumbContainer = styled.div`
   }
 `;
 
-export const Thumb = styled.img`
+export const Thumb = styled(Img)`
   z-index: 2;
   width: 100%;
   border-radius: 3px;

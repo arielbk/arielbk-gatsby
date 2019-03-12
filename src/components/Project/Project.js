@@ -38,7 +38,7 @@ const Project = (props) => {
             ))}
         </Skills>
         <ThumbContainer>
-          <Thumb src={image.childImageSharp.fluid.src} alt={`${title} main page screenshot`} />
+          <Thumb fluid={image.childImageSharp.fluid} alt={`${title} main page screenshot`} />
           <a href={demo} target="_blank" rel="noopener noreferrer">
             <ThumbOverlay>
               <i className="fas fa-external-link-alt" />

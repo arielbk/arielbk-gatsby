@@ -25,7 +25,7 @@ const Portfolio = () => (
                 image {
                   childImageSharp {
                     fluid {
-                      src
+                      ...GatsbyImageSharpFluid
                     }
                   }
                 }
