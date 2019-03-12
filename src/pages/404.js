@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import styled from 'styled-components';
 
-import SEO from "../components/seo";
+import SEO from '../components/seo';
 import GlobalStyle from '../assets/globalStyles';
 
 const Container = styled.div`
@@ -36,7 +36,7 @@ const NotFoundPage = () => (
       <h1>NOT FOUND</h1>
       <p>
         That page doesn&#39;t exist... <br />
-        Head over to the <a href="https://arielbk.com">homepage</a>
+        Head over to the <a href="https://arielbk.com">homepage</a>.
       </p>
     </div>
   </Container>
