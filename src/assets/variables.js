@@ -1,3 +1,5 @@
+// these variables could be implemented as a styled-components theme
+
 const variables = {
   media: {
     sm: '(max-width: 500px)',

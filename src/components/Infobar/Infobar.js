@@ -20,6 +20,7 @@ const Infobar = () => (
         </Title>
         <Caption>web developer</Caption>
 
+        {/* TODO: Make this a gatsby image */}
         <StyledBiophoto src={biophoto} />
       </header>
 

@@ -1,10 +1,10 @@
 <p align="center">
   <a href="https://www.arielbk.com">
-    <img alt="Gatsby" src="https://arielbk.com/icons/icon-256x256.png" width="60" />
+    <img alt="arielbk" src="https://arielbk.com/icons/icon-256x256.png" width="120" />
   </a>
 </p>
 <h1 align="center">
-  arielbk
+  arielbk Portfolio
 </h1>
 
 
@@ -20,10 +20,9 @@ Originally this was a statically served website using Next.JS, but recently I br
 
 
 ## Test and deploy
-`npm run dev` to start the development server.
+`gatsby develop` to start the development server.
 
-`npm run build` exports the site as static HTML ready to upload to any server.
-
+`gatsby build` exports the site as static HTML ready to upload to any server.
 
 ## Demo
 [Check it out at https://arielbk.com](https://arielbk.com)

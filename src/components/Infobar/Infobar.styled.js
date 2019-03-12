@@ -59,7 +59,7 @@ export const Title = styled.h1`
 export const Caption = styled.h3`
   margin-top: .5rem;
   margin-bottom: 2.5rem;
-  font-weight: 200;
+  font-weight: 400;
   
   @media ${({ theme }) => theme.media.md} {
     text-align: center;

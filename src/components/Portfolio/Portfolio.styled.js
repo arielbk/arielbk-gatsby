@@ -10,7 +10,7 @@ export const StyledPortfolio = styled.div`
 
   footer {
     height: 100vh;
-    // so old phone browsers don't give it way too much height...
+    /* so old phone browsers don't give it way too much height... */
     max-height: 1000px;
     margin: 0;
     padding: 0;
