@@ -18,14 +18,15 @@ import {
 
 const Project = (props) => {
   const {
-    dark, demo, name, date, skills, image, blurb, repo,
+    dark, demo, title, date, repo, html, image
   } = props;
+  const skills = props.skills.split(', ');
   return (
     <StyledProject dark={dark}>
       <Container>
         <TopTitle>
-          <a href={demo} target="_blank" rel="noopener noreferrer" title={`${name} demo`}>
-            {name}
+          <a href={demo} target="_blank" rel="noopener noreferrer" title={`${title} demo`}>
+            {title}
           </a>
         </TopTitle>
         <Date>{date}</Date>
@@ -37,7 +38,7 @@ const Project = (props) => {
             ))}
         </Skills>
         <ThumbContainer>
-          <Thumb src={image} alt={`${name} main page screenshot`} />
+          <Thumb src={image.childImageSharp.fluid.src} alt={`${title} main page screenshot`} />
           <a href={demo} target="_blank" rel="noopener noreferrer">
             <ThumbOverlay>
               <i className="fas fa-external-link-alt" />
@@ -47,14 +48,14 @@ const Project = (props) => {
 
         <Body>
           <BottomTitle>
-            <a href={demo} target="_blank" rel="noopener noreferrer" title={`${name} demo`}>
-              {name}
+            <a href={demo} target="_blank" rel="noopener noreferrer" title={`${title} demo`}>
+              {title}
             </a>
           </BottomTitle>
 
-          <Text>
-            {/* eslint-disable-next-line react/no-array-index-key */}
-            {blurb.map((para, i) => (<p key={i}>{para}</p>))}
+          <Text dangerouslySetInnerHTML={{
+            __html: html
+          }}>
           </Text>
 
           <Actions>
@@ -80,7 +81,7 @@ Project.propTypes = {
 
   name: PropTypes.string.isRequired,
   image: PropTypes.string,
-  blurb: PropTypes.arrayOf(PropTypes.string).isRequired,
+  // blurb: PropTypes.arrayOf(PropTypes.string).isRequired,
   skills: PropTypes.arrayOf(PropTypes.string),
   date: PropTypes.string,
   repo: PropTypes.string,
