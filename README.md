@@ -10,7 +10,7 @@
 
 This is my personal website and portfolio; a platform to showcase my web development projects.
 
-Originally this was a statically served website using Next.JS, but recently I brought it over to [Gatsby.js](https://gatsbyjs.org). I did this to learn about Gatsby, and it's pretty cool 👌
+Originally this was a statically served website using Next.JS, but recently I brought it over to [Gatsby.js](https://gatsbyjs.org). I did this to learn about Gatsby, and it's pretty cool 👌 Fast and SEO-friendly.
 
 
 ## Tech stack
@@ -20,9 +20,9 @@ Originally this was a statically served website using Next.JS, but recently I br
 
 
 ## Test and deploy
-`gatsby develop` to start the development server.
+`npm run develop || yarn develop` to start the development server.
 
-`gatsby build` exports the site as static HTML ready to upload to any server.
+`npm run build || yarn build` exports a static site ready to upload to any server.
 
 ## Demo
 [Check it out at https://arielbk.com](https://arielbk.com)

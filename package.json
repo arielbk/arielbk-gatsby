@@ -2,7 +2,7 @@
   "name": "arielbk",
   "private": true,
   "description": "Personal website and portfolio for web developer Ariel Buchwald-Kearney.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Ariel Buchwald-Kearney <buchwald.kearney@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
