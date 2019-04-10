@@ -81,7 +81,7 @@ export const StyledBiophoto = styled.img`
 export const Biotext = styled.div`
   margin: 2rem 0 0 0;
   p {
-    font-weight: 200;
+    font-weight: 300;
     line-height: 1.75;
     font-size: 1rem;
     margin-bottom: 1rem;

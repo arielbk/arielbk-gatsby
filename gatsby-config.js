@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Ariel Buchwald-Kearney — Web Developer`,
-    description: `Personal website and portfolio for web developer Ariel Buchwald-Kearney.`,
-    author: `@arielbk`,
+    description: `Personal website and portfolio for web developer Ariel Buchwald-Kearney (arielbk).`,
+    author: `Ariel Buchwald-Kearney`,
   },
   plugins: [
     {

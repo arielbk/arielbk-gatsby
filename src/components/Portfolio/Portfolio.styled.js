@@ -50,7 +50,7 @@ export const Arrow = styled.svg`
 export const Title = styled.h1`
   margin: 0;
   color: ${props => props.theme.colors.almostwhite};
-  font-weight: 200;
+  font-weight: 300;
   font-size: 2.2rem;
   text-transform: uppercase;
 `;

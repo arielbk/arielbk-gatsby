@@ -177,7 +177,7 @@ export const Text = styled.div`
   width: 73%;
   margin-right: 1.5rem;
   color: ${props => props.theme.colors.lightgrey};
-  font-weight: 200;
+  font-weight: 300;
 
   @media ${props => props.theme.media.xlg} {
     width: 100%;
@@ -199,7 +199,7 @@ export const Text = styled.div`
 export const Title = styled.h3`
   z-index: 2;
   font-size: 2rem;
-  font-weight: 200;
+  font-weight: 300;
   color: #fff;
   display: inline-block;
 
