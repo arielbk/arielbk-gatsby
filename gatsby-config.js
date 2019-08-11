@@ -40,6 +40,13 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: 'cr5tlhjz',
+        dataset: 'production',
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects`,

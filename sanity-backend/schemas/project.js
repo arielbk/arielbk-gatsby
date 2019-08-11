@@ -1,6 +1,6 @@
 export default {
-  name: 'post',
-  title: 'Post',
+  name: 'project',
+  title: 'Project',
   type: 'document',
   fields: [
     {
@@ -9,19 +9,28 @@ export default {
       type: 'string'
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96
-      }
+      name: 'date',
+      title: 'Date',
+      type: 'datetime'
     },
     {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'}
+      name: 'repo',
+      title: 'Repository',
+      type: 'string'
+    },
+    {
+      name: 'demoUrl',
+      title: 'Demo URL',
+      type: 'string'
+    },
+    {
+      name: 'skills',
+      title: 'Skills',
+      type: 'array',
+      of: [{
+        type: 'reference',
+        to: [{ type: 'skill' }]
+      }]
     },
     {
       name: 'mainImage',
@@ -30,17 +39,6 @@ export default {
       options: {
         hotspot: true
       }
-    },
-    {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}]
-    },
-    {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime'
     },
     {
       name: 'body',
