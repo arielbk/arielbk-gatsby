@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import BlockContent from '@sanity/block-content-to-react';
 import {
   StyledProject,
   Container,
@@ -18,9 +19,8 @@ import {
 
 const Project = (props) => {
   const {
-    dark, demo, title, date, repo, html, image
+    dark, demo, title, date, repo, body, image, skills
   } = props;
-  const skills = props.skills.split(', ');
   return (
     <StyledProject dark={dark}>
       <Container>
@@ -34,11 +34,11 @@ const Project = (props) => {
         <Skills>
           {skills.length
             && skills.map(skill => (
-              <Skill skill={skill} key={skill}>{skill}</Skill>
+              <Skill skill={skill.title} key={skill.title} bg={skill.bgColor} text={skill.textColor}>{skill.title}</Skill>
             ))}
         </Skills>
         <ThumbContainer>
-          <Thumb fluid={image.childImageSharp.fluid} alt={`${title} main page screenshot`} />
+          <Thumb fluid={image.asset.fluid} alt={`${title} main page screenshot`} />
           <a href={demo} target="_blank" rel="noopener noreferrer">
             <ThumbOverlay>
               <i className="fas fa-external-link-alt" />
@@ -53,10 +53,11 @@ const Project = (props) => {
             </a>
           </BottomTitle>
 
-          <Text dangerouslySetInnerHTML={{
+          {/* <Text dangerouslySetInnerHTML={{
             __html: html
           }}>
-          </Text>
+          </Text> */}
+          <Text><BlockContent blocks={body} /></Text>
 
           <Actions>
             <Button href={repo} target="_blank">
@@ -78,11 +79,14 @@ const Project = (props) => {
 
 Project.propTypes = {
   dark: PropTypes.bool.isRequired,
-
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string,
-  // blurb: PropTypes.arrayOf(PropTypes.string).isRequired,
-  skills: PropTypes.arrayOf(PropTypes.string),
+  title: PropTypes.string.isRequired,
+  image: PropTypes.shape({}),
+  skills: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    textColor: PropTypes.string.isRequired,
+    bgColor: PropTypes.string.isRequired,
+  })),
+  body: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   date: PropTypes.string,
   repo: PropTypes.string,
   demo: PropTypes.string.isRequired,

@@ -9,34 +9,33 @@ const Portfolio = () => (
   <StaticQuery
     query={graphql`
       {
-        allMarkdownRemark(sort: {
-          order: DESC,
-          fields: [frontmatter___date, frontmatter___title]
-        }) {
+        allSanityProject(sort: {order: DESC, fields: date}) {
           edges {
             node {
               id
-              frontmatter {
-                title
-                date(formatString: "MMMM YYYY")
-                repo
-                demo
-                skills
-                image {
-                  childImageSharp {
-                    fluid {
-                      ...GatsbyImageSharpFluid
-                    }
+              repo
+              title
+              demoUrl
+              date(formatString: "MMMM YYYY")
+              mainImage {
+                asset {
+                  fluid {
+                    ...GatsbySanityImageFluid
                   }
                 }
               }
-              html
+              skills {
+                title
+                textColor
+                bgColor
+              }
+              _rawBody(resolveReferences: {maxDepth: 5})
             }
           }
         }
-      }
+      }    
     `}
-    render={({ allMarkdownRemark }) => (
+    render={({ allSanityProject }) => (
       <StyledPortfolio>
         <Arrow width="40" height="87" viewBox="0 0 40 87">
           <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#505152" />
@@ -69,8 +68,8 @@ const Portfolio = () => (
           </Contact>
         </header>
 
-        {allMarkdownRemark.edges.map(({ node }, index) => (
-          <Project {...node.frontmatter} html={node.html} key={node.id} dark={(index % 2 === 0)} />
+        {allSanityProject.edges.map(({ node }, index) => (
+          <Project demo={node.demoUrl} title={node.title} date={node.date} repo={node.repo} image={node.mainImage} body={node._rawBody} skills={node.skills} key={node.id} dark={(index % 2 === 0)} />
         ))}
 
         <footer>
