@@ -16,11 +16,13 @@ export default {
     {
       name: 'bgColor',
       title: 'Background Color',
+      // TODO: Make this a color type
       type: 'string'
     },
     {
       name: 'textColor',
       title: 'Text Color',
+      // TODO: Make this a color type
       type: 'string'
     },
   ],
