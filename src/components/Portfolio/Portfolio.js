@@ -43,7 +43,7 @@ const Portfolio = () => (
         <header>
           <Title>My projects</Title>
           <Lead>
-            A selection of coding projects, with the more recent at the top.
+            A selection of coding projects, with the more recent at the top
           </Lead>
 
           <Contact>

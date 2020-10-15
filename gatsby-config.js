@@ -44,6 +44,7 @@ module.exports = {
       options: {
         projectId: 'cr5tlhjz',
         dataset: 'production',
+        watchMode: true,
       }
     },
     {
