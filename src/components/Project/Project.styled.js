@@ -256,10 +256,12 @@ export const Button = styled.a`
   text-align: center;
   border-radius: 3px;
   ${props => props.theme.transition('background')};
+  cursor: default;
 
-  &:hover {
+  &[href]:hover {
     background: ${props => props.theme.colors.brightblue};
     color: #fff;
+    cursor: pointer;
   }
 
   .fas {
